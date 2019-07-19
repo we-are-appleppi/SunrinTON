@@ -18,7 +18,7 @@ public class LoginActiviy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent joinIntent = new Intent(LoginActiviy.this,register_1.class);
-                LoginActiviy.this.startActivity(joinIntent);
+                startActivity(joinIntent);
             }
         });
 

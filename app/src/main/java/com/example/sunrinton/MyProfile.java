@@ -21,14 +21,7 @@ public class MyProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
-        name = findViewById(R.id.myprofile_name);
-        email = findViewById(R.id.myprofile_email);
-        key = findViewById(R.id.myprofile_key);
-        resetbtn = findViewById(R.id.myprofile_resetbtn);
 
-        name.setText(UserManager.name);
-        key.setText(UserManager.key);
-        email.setText(UserManager.email);
 
         MaterialCalendarView materialCalendarView = findViewById(R.id.calendarView);
 

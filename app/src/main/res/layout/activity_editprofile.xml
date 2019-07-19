@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profiles.Editprofile">
+    tools:context=".Profiles.Editprofile"
+    android:background="@drawable/group_6"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:src="@drawable/ic_account_circle_gray_24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="155dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:text="Name"
+        android:textColor="#333333"
+        android:fontFamily="@font/nanumgothicextrabold"
+        android:layout_marginTop="17dp"/>
+
+    <EditText
+        android:layout_width="234dp"
+        android:layout_height="30dp"
+        android:id="@+id/edit_address"
+        android:background="@drawable/layer_2_copy_8"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/drawable_shape_home"
+        android:paddingLeft="9dp"
+        android:hint="주소"
+        android:textColor="#333333"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:layout_width="234dp"
+        android:layout_height="30dp"
+        android:id="@+id/edit_email"
+        android:background="@drawable/layer_2_copy_8"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/drawalbe_shape_2"
+        android:paddingLeft="9dp"
+        android:hint="이메일"
+        android:textColor="#333333"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:layout_width="234dp"
+        android:layout_height="30dp"
+        android:id="@+id/edit_belong"
+        android:background="@drawable/layer_2_copy_8"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/drawable_shape_1"
+        android:paddingLeft="9dp"
+        android:hint="소속"
+        android:textColor="#333333"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:layout_width="234dp"
+        android:layout_height="30dp"
+        android:id="@+id/edit_part"
+        android:background="@drawable/layer_2_copy_8"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/drawable_shape_1"
+        android:paddingLeft="9dp"
+        android:hint="역할"
+        android:textColor="#333333"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"/>
+
+    <ImageButton
+        android:layout_width="136dp"
+        android:layout_height="25dp"
+        android:id="@+id/modified_clear"
+        android:background="@drawable/group_9"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="52dp"/>
+
+</LinearLayout>

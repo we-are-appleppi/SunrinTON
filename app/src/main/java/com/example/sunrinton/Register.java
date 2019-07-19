@@ -1,26 +1,20 @@
 package com.example.sunrinton;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class register_4 extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     String email, str_name, str_passwd;
 
@@ -41,6 +35,13 @@ public class register_4 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
 
                     }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Register.this, "오류가 발생하였습니다.", Toast.LENGTH_SHORT);
+                    }
                 });
+
     }
 }

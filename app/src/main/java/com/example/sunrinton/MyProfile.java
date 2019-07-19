@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.sunrinton.Account.UserManager;
 
-public class myProfile extends AppCompatActivity {
+public class MyProfile extends AppCompatActivity {
 
     TextView name, email, key;
     Button resetbtn;

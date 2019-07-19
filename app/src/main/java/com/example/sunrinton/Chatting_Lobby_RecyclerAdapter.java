@@ -20,7 +20,6 @@ public class Chatting_Lobby_RecyclerAdapter extends RecyclerView.Adapter<Chattin
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView chatname;
         TextView chat;
-        TextView time;
         LinearLayout LL;
 
         public ViewHolder(View itemView) {
@@ -28,7 +27,6 @@ public class Chatting_Lobby_RecyclerAdapter extends RecyclerView.Adapter<Chattin
             LL = itemView.findViewById(R.id.chatting_lobby_listitem_LL);
             chatname = itemView.findViewById(R.id.chattingLobby_listitem_tv_chatname);
             chat = itemView.findViewById(R.id.chattingLobby_listitem_tv_recentchat);
-            time=itemView.findViewById(R.id.chattingLobby_listitem_tv_recenttime);
 
         }
     }
@@ -56,7 +54,6 @@ public class Chatting_Lobby_RecyclerAdapter extends RecyclerView.Adapter<Chattin
             public void onClick(View view) {
                 //채팅방 클릭
                 Intent intent = new Intent(view.getContext(), ChattingActivity.class);
-                intent.putExtra("ChatName",items.get(i).getChatName_Eng());
                 intent.putExtra("opname",items.get(i).getChatName_Kor());
                 ((Activity)vh.itemView.getContext()).startActivityForResult(intent,7655);
             }
@@ -64,11 +61,6 @@ public class Chatting_Lobby_RecyclerAdapter extends RecyclerView.Adapter<Chattin
 
         vh.chat.setText(items.get(i).getRecent_chat());
         vh.chatname.setText(items.get(i).getChatName_Kor());
-        if(date.equals(items.get(i).getRecent_date())){
-            vh.time.setText(items.get(i).getRecent_time().substring(0,items.get(i).getRecent_time().length()-2));
-        }else{
-            vh.time.setText(items.get(i).getRecent_date().substring(4,6)+"월 "+items.get(i).getRecent_date().substring(6)+"일");
-        }
     }
 
     @Override

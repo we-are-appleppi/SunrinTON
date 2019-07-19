@@ -33,6 +33,11 @@ public class Lobby_CustomAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(R.layout.chatting_lobby_items, parent, false);
 
+        TextView tv_lobby_name = convertView.findViewById(R.id.lobby_name);
+        TextView tv_lobby_preview = convertView.findViewById(R.id.lobby_preview);
+        tv_lobby_name.setText(datas.get(position).getName());
+        tv_lobby_preview.setText(datas.get(position).getPreview());
+
         return convertView;
     }
 }

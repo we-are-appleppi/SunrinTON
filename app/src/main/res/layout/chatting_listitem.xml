@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_item_LL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:orientation="vertical"
+        android:layout_marginRight="4dp"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="1dp"
+            android:id="@+id/chat_item_img_profile_topview"
+            android:layout_height="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chat_item_tv_timeleft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:gravity="bottom"
+        android:text="오전 05:12"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chat_item_tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            tools:text="djkhasjkhdjk" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chat_item_tv_timeright"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="bottom"
+        android:text="오전 05:12"
+        android:textSize="11sp" />
+
+</LinearLayout>

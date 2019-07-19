@@ -109,6 +109,7 @@ public class LoginActiviy extends AppCompatActivity {
                                         System.out.println(name);
                                         UserManager.name = jsonObject.getString("name");
                                         UserManager.key = jsonObject.getString("key");
+                                        UserManager.password = jsonObject.getString("password");
                                         try {
                                             UserManager.locate = jsonObject.getString("locate");
                                             UserManager.part = jsonObject.getString("part");

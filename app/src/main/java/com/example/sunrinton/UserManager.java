@@ -8,6 +8,7 @@ public class UserManager {
     public static String locate;
     public static String part;
     public static String division;
+    public static String password;
 
     public static void UnSign() {
         name = null;
@@ -16,5 +17,6 @@ public class UserManager {
         locate = null;
         part = null;
         division = null;
+        password = null;
     }
 }

@@ -10,6 +10,7 @@ public class Human {
     private Date birth;
     private String email;
 
+    private String wonwoo;
     public Human(String name, Date birth, String email) {
         this.name = name;
         this.birth = birth;

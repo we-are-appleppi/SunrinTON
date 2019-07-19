@@ -14,11 +14,12 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-
 
 
 public class Register extends AppCompatActivity {
@@ -34,52 +35,76 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        et_email=findViewById(R.id.et_email);
-        et_name=findViewById(R.id.et_name);
-        et_passwd=findViewById(R.id.et_password);
-        start=findViewById(R.id.start);
+        setContentView(R.layout.activity_register);
 
-        str_email=et_email.getText().toString();
-        str_passwd=et_passwd.getText().toString();
-        str_name=et_name.getText().toString();
+        et_email = findViewById(R.id.et_email);
+        et_name = findViewById(R.id.et_name);
+        et_passwd = findViewById(R.id.et_password);
+        start = findViewById(R.id.start);
 
-
-        datas.put("name", str_name);
-        datas.put("password", str_passwd);
-        //datas.put("key", timestamp);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(str_email).matches()){
-                    Toast.makeText(Register.this, "잘못된 이메일형식 입니다", Toast.LENGTH_SHORT);
-                }
-                else{
-                    db.collection("accounts").document(str_email)
-                            .set(datas)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
+                str_email = et_email.getText().toString();
+                str_passwd = et_passwd.getText().toString();
+                str_name = et_name.getText().toString();
 
+                datas.put("name", str_name);
+                datas.put("password", str_passwd);
+                //datas.put("key", timestamp);
+
+
+
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(str_email).matches()) {
+                    Toast.makeText(Register.this, "잘못된 이메일형식 입니다", Toast.LENGTH_SHORT).show();
+                } else {
+                    DocumentReference docRef = db.collection("accounts").document(str_email);
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                            if(task.isSuccessful()) {
+                                DocumentSnapshot document = task.getResult();
+                                if(!document.exists()) {
+                                    if(str_name.isEmpty() || str_name == null) {
+                                        Toast.makeText(Register.this, "이름을 입력해 주세요", Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
+
+
+                                    if(str_passwd.isEmpty() || str_passwd == null) {
+                                        Toast.makeText(Register.this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
+                                    db.collection("accounts").document(str_email)
+                                            .set(datas)
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    Intent intent = new Intent();
+                                                    intent.putExtra("email", str_email);
+                                                    intent.putExtra("password", str_passwd);
+                                                    intent.putExtra("name", str_name);
+                                                    setResult(RESULT_OK, intent);
+                                                    finish();
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Toast.makeText(Register.this, "오류가 발생하였습니다.", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                } else {
+                                    Toast.makeText(Register.this, "이미 등록된 계정입니다.", Toast.LENGTH_SHORT).show();
                                 }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Register.this, "오류가 발생하였습니다.", Toast.LENGTH_SHORT);
-                                }
-                            });
+                            }
+                        }
+                    });
                 }
-                Intent intent = new Intent();
-                intent.putExtra("email", str_email);
-                intent.putExtra("password", str_passwd);
-                intent.putExtra("name", str_name);
-                setResult(RESULT_OK, intent);
-                finish();
             }
         });
 
-
-
     }
+
 }

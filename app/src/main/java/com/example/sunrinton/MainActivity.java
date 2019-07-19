@@ -87,7 +87,9 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
             intent = new Intent(MainActivity.this, MyProfile.class);
+            UserManager.UnSign();
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_share) {
 
         }

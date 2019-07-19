@@ -83,7 +83,7 @@ public class LoginActiviy extends AppCompatActivity {
         else{
             if(android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                 Toast.makeText(this, "요청중입니다", Toast.LENGTH_SHORT).show();
-                DocumentReference docRef = db.collection("accounts").document(email);
+                final DocumentReference docRef = db.collection("accounts").document(email);
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -101,6 +101,9 @@ public class LoginActiviy extends AppCompatActivity {
                                             SaveProfileDatas(email, password, name);
                                         }
                                         Intent loginIntent = new Intent(LoginActiviy.this,MainActivity.class);
+                                        UserManager.email = email;
+                                        UserManager.name = name;
+                                        UserManager.key = jsonObject.getString("key");
                                         startActivity(loginIntent);
                                     }
                                     else{
@@ -128,7 +131,7 @@ public class LoginActiviy extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode== RESULT_OK){
-            if (requestCode==123){
+            if (requestCode==123) {
                 r_email = data.getStringExtra("email");
                 r_password = data.getStringExtra("password");
 

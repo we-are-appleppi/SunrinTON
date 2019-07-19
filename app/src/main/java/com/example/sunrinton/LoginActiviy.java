@@ -68,7 +68,7 @@ public class LoginActiviy extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Login(idtext.getText().toString(), passwordtext.getText().toString());
+                Login(idtext.getText().toString(), passwordtext.getText().toString(), "");
                 Intent loginIntent = new Intent(LoginActiviy.this,MainActivity.class);
                 startActivity(loginIntent);
             }

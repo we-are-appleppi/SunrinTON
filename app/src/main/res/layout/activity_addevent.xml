@@ -6,23 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profiles.Addevent"
-    android:background="@drawable/copy">
+    android:background="@drawable/group_11">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/hintfont"
-        android:text="CALENDAR"
-        android:textColor="#ffffff"
-        android:textSize="30sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="140dp"/>
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/add_calendar"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="130dp"
         android:layout_gravity="center_horizontal"/>
     
     <ImageButton
@@ -37,6 +28,7 @@
         android:layout_width="57dp"
         android:layout_height="23dp"
         android:layout_marginLeft="55dp"
+        android:layout_marginTop="31dp"
         android:src="@drawable/group_4"/>
     
     <EditText
@@ -48,7 +40,8 @@
         android:fontFamily="@font/nanumgothicbold"
         android:textSize="9dp"
         android:padding="9dp"
-        android:gravity="top"/>
+        android:gravity="top"
+        android:layout_marginTop="4dp"/>
 
 
 

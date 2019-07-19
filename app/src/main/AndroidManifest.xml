@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ChattingActivity"></activity>
-        <activity android:name=".Chatting_lobby" />
+        <activity android:name=".ChattingLobbyActivity" />
         <activity android:name=".Profiles.Editprofile"></activity>
         <activity android:name=".Profiles.Othercalendar" />
         <activity android:name=".Profiles.Addevent" />

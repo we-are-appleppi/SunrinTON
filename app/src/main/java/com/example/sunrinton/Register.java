@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,7 +25,7 @@ public class Register extends AppCompatActivity {
 
     String str_email, str_name, str_passwd;
     EditText et_email, et_name, et_passwd;
-    Button start;
+    TextView start;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     Map<String, Object> datas = new HashMap<>();

@@ -71,9 +71,9 @@ public class Othercalendar extends AppCompatActivity {
                             Intent loginIntent = new Intent(Othercalendar.this, MainActivity.class);
                             tvname.setText(jsonObject.getString("name"));
                             try {
-                                tvlocate.setText(jsonObject.getString("locate"));
+                                tvlocate.setText(jsonObject.getString("address"));
                                 tvpart.setText(jsonObject.getString("part"));
-                                tvdivision.setText(jsonObject.getString("division"));
+                                tvdivision.setText(jsonObject.getString("belong"));
                             } catch(Exception e) {
 
                             }

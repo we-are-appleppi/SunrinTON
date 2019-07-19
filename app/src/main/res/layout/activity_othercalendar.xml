@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Profiles.Othercalendar"
     android:orientation="vertical"
-    android:background="@drawable/group_2_copy">
+    android:background="@drawable/group_10">
 
     <ImageView
         android:layout_width="76dp"

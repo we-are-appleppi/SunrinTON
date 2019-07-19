@@ -3,9 +3,13 @@ package com.example.sunrinton;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.sunrinton.Profiles.Editprofile;
+import com.example.sunrinton.Profiles.Mycalendar;
+import com.example.sunrinton.Profiles.Othercalendar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.KeyEvent;
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -21,6 +25,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,9 +47,43 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        TextView name, locate, email, division, part;
+        name = findViewById(R.id.myName);
+        locate = findViewById(R.id.address);
+        email = findViewById(R.id.email);
+        division = findViewById(R.id.belong);
+        part = findViewById(R.id.part);
+
+        name.setText(UserManager.name);
+        email.setText(UserManager.email);
+        locate.setText(UserManager.locate);
+        division.setText(UserManager.division);
+        part.setText(UserManager.part);
+
+        ImageView editbtn = findViewById(R.id.modified);
+        editbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Editprofile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        final EditText et = findViewById(R.id.search);
+        et.setSingleLine(true);
+        TextView search = findViewById(R.id.search_button);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Othercalendar.class);
+                intent.putExtra("email", et.getText().toString());
+                startActivity(intent);
+            }
+        });
     }
 
-    @Override
+        @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -87,9 +129,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-//            intent = new Intent(MainActivity.this, MyProfile.class);
-//            startActivity(intent);
-//            finish();
+            intent = new Intent(MainActivity.this, Mycalendar.class);
+            startActivity(intent);
+            finish();
         }
 
 

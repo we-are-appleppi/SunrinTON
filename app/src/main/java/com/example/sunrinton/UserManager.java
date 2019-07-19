@@ -5,11 +5,18 @@ public class UserManager {
     public static String name;
     public static String key;
     public static String email;
+    public static String locate;
+    public static String part;
+    public static String division;
+    public static String password;
 
     public static void UnSign() {
         name = null;
         key = null;
         email = null;
+        locate = null;
+        part = null;
+        division = null;
+        password = null;
     }
-
 }

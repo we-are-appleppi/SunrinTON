@@ -106,8 +106,17 @@ public class LoginActiviy extends AppCompatActivity {
                                         }
                                         Intent loginIntent = new Intent(LoginActiviy.this,MainActivity.class);
                                         UserManager.email = email;
-                                        UserManager.name = name;
+                                        System.out.println(name);
+                                        UserManager.name = jsonObject.getString("name");
                                         UserManager.key = jsonObject.getString("key");
+                                        UserManager.password = jsonObject.getString("password");
+                                        try {
+                                            UserManager.locate = jsonObject.getString("locate");
+                                            UserManager.part = jsonObject.getString("part");
+                                            UserManager.division = jsonObject.getString("division");
+                                        } catch(Exception e) {
+
+                                        }
                                         startActivity(loginIntent);
                                         finish();
                                     }

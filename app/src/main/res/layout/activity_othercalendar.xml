@@ -22,12 +22,13 @@
         android:textSize="20sp"
         android:layout_gravity="center_horizontal"
         android:text="Name"
+        android:id="@+id/othername"
         android:textColor="#333333"
         android:fontFamily="@font/nanumgothicextrabold"
         android:layout_marginTop="14dp"/>
 
     <TextView
-        android:id="@+id/address"
+        android:id="@+id/otheraddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
@@ -39,7 +40,7 @@
         android:layout_marginTop="38dp"/>
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/otheremail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
@@ -51,7 +52,7 @@
         android:layout_marginTop="20dp"/>
 
     <TextView
-        android:id="@+id/belong"
+        android:id="@+id/otherbelong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
@@ -63,7 +64,7 @@
         android:layout_marginTop="20dp"/>
 
     <TextView
-        android:id="@+id/part"
+        android:id="@+id/otherpart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"

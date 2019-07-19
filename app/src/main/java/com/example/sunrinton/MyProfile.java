@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.sunrinton.Account.UserManager;
+import com.example.sunrinton.UserManager;
 
 public class MyProfile extends AppCompatActivity {
 

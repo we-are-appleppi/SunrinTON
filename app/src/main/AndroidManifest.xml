@@ -14,7 +14,6 @@
         <activity android:name=".Profiles.Editprofile"></activity>
         <activity android:name=".Profiles.Othercalendar" />
         <activity android:name=".Profiles.Addevent" />
-        <activity android:name=".addevent" />
         <activity android:name=".Profiles.Mycalendar" />
         <activity android:name=".Chatting_lobby" />
         <activity

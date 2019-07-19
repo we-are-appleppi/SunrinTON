@@ -6,9 +6,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.sunrinton.UserManager;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewDecorator;
+import com.prolificinteractive.materialcalendarview.DayViewFacade;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.spans.DotSpan;
 
 public class MyProfile extends AppCompatActivity {
+
 
     TextView name, email, key;
     Button resetbtn;
@@ -24,5 +29,21 @@ public class MyProfile extends AppCompatActivity {
         name.setText(UserManager.name);
         key.setText(UserManager.key);
         email.setText(UserManager.email);
+
+        MaterialCalendarView materialCalendarView = findViewById(R.id.calendarView);
+
+        materialCalendarView.addDecorator(new DayViewDecorator() {
+            @Override
+            public boolean shouldDecorate(CalendarDay day) {
+                return false;
+            }
+
+            @Override
+            public void decorate(DayViewFacade view) {
+                view.addSpan(new DotSpan(5, R.color.colorRed));
+            }
+
+        });
+
     }
 }

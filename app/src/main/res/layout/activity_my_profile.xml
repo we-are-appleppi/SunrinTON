@@ -7,33 +7,26 @@
     tools:context=".MyProfile"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="내 프로필"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="35sp"
-        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
         android:id="@+id/myprofile_name"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
         android:id="@+id/myprofile_email"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
         android:id="@+id/myprofile_key"
         android:text="내 보안키 : "/>
 
@@ -41,8 +34,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="보안키 재설정"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:layout_gravity="right"
         android:id="@+id/myprofile_resetbtn"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="none"
+        app:mcv_selectionColor="#00F"
+        />
+
 
 </LinearLayout>

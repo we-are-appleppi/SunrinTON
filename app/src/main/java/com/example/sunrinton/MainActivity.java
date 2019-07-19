@@ -1,5 +1,6 @@
 package com.example.sunrinton;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -85,10 +86,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Intent intent;
+
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
+            intent = new Intent(MainActivity.this, myProfile.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         }

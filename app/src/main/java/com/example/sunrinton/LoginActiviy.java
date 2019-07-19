@@ -14,11 +14,20 @@ public class LoginActiviy extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Button joinButton = (Button)findViewById(R.id.joinButton);
+        Button loginButton = findViewById(R.id.loginButton);
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent joinIntent = new Intent(LoginActiviy.this,register_1.class);
                 startActivity(joinIntent);
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent loginIntent = new Intent(LoginActiviy.this,MainActivity.class);
+                startActivity(loginIntent);
             }
         });
 

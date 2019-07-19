@@ -7,8 +7,8 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:id="@+id/chatting_lobby_listitem_LL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,16 +38,9 @@
                 android:layout_marginTop="6dp"
 
                 android:textSize="20sp"
-                tools:text="Where is UI/UX!!!" />
+                tools:text="wow!" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/chattingLobby_listitem_tv_recenttime"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-            android:textSize="15sp"
-            tools:text="오전 11:35" />
 
     </LinearLayout>
 </LinearLayout>

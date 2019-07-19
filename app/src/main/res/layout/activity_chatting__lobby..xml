@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/chatting_lobby_tab"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="40dp"
         android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="실시간 채팅"
-                    android:textColor="#fff"
+                    android:textColor="#000000"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -39,7 +39,6 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/chattingLobby_rcv"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

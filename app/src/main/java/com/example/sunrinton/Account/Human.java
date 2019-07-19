@@ -1,9 +1,9 @@
-package com.example.sunrinton;
+package com.example.sunrinton.Account;
 
 import java.util.Date;
 
 /*
-* 개인정보 저장 클래스
+* 다른 사람들 개인정보 저장 클래스
 */
 public class Human {
     private String name;

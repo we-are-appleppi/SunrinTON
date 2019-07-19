@@ -48,7 +48,6 @@ public class Register extends AppCompatActivity {
                 str_passwd = et_passwd.getText().toString();
                 str_name = et_name.getText().toString();
 
-
                 datas.put("name", str_name);
                 datas.put("password", str_passwd);
                 //datas.put("key", timestamp);

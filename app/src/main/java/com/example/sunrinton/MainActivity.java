@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.logout) {
             Intent intent = new Intent(MainActivity.this, LoginActiviy.class);
             startActivity(intent);
+            finish();
             return true;
         }
 

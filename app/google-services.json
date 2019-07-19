@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "437509473563",
+    "firebase_url": "https://sunrinton-ebb84.firebaseio.com",
+    "project_id": "sunrinton-ebb84",
+    "storage_bucket": "sunrinton-ebb84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437509473563:android:ea8ad6760f4d5411",
+        "android_client_info": {
+          "package_name": "com.example.sunrinton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437509473563-n21veh6shg9a76mkf63clil298mqaekc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sunrinton",
+            "certificate_hash": "e0f02b3c57cf69232ef1876e610e936089bfde04"
+          }
+        },
+        {
+          "client_id": "437509473563-8bkvqlah3q73hpsrfevlb4ancmh7escj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPGVK54wzWfkDHIEZS80uH4OXW5810yqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437509473563-8bkvqlah3q73hpsrfevlb4ancmh7escj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

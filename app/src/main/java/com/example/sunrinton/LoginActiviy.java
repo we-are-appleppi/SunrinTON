@@ -1,5 +1,6 @@
 package com.example.sunrinton;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
@@ -31,6 +32,7 @@ public class LoginActiviy extends AppCompatActivity {
     EditText idtext, passwordtext;
     String _email, _password, _name;
     String r_email, r_password;
+    ProgressDialog asyncDialog;
 
 
 
@@ -42,6 +44,7 @@ public class LoginActiviy extends AppCompatActivity {
         passwordtext=findViewById(R.id.passwordText);
         TextView joinButton = findViewById(R.id.joinButton);
         TextView loginButton = findViewById(R.id.loginButton);
+        asyncDialog = new ProgressDialog(this);
 
         SharedPreferences mprefs = getSharedPreferences("Profile", MODE_PRIVATE);
         Boolean Auto_login =mprefs.getBoolean("AutoLogin", false);
@@ -82,7 +85,8 @@ public class LoginActiviy extends AppCompatActivity {
         }
         else{
             if(android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                Toast.makeText(this, "요청중입니다", Toast.LENGTH_SHORT).show();
+                asyncDialog.setMessage("요청중입니다");
+                asyncDialog.show();
                 final DocumentReference docRef = db.collection("accounts").document(email);
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -121,8 +125,10 @@ public class LoginActiviy extends AppCompatActivity {
                         else{
                             Log.e("DB", "failed with"+ task.getException());
                         }
+                        asyncDialog.dismiss();
                     }
                 });
+
             }
         }
 

@@ -90,8 +90,6 @@ public class MainActivity extends AppCompatActivity
             UserManager.UnSign();
             startActivity(intent);
             finish();
-        } else if (id == R.id.nav_share) {
-
         }
 
 

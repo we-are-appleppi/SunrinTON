@@ -13,14 +13,4 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
     </group>
-
-    <item android:title="공유">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
-        </menu>
-    </item>
-
 </menu>

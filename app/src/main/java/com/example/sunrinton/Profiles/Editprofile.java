@@ -29,6 +29,7 @@ public class Editprofile extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     EditText editemail, editlocate, editdivision,editpart;
+    TextView tvname;
     ImageButton apply;
     Map<String, Object> datas = new HashMap<>();
 
@@ -42,6 +43,9 @@ public class Editprofile extends AppCompatActivity {
         editdivision = findViewById(R.id.edit_belong);
         apply = findViewById(R.id.modified_clear);
 
+        tvname = findViewById(R.id.namelabel);
+
+        tvname.setText(UserManager.name);
         editemail.setText(UserManager.email);
         editlocate.setText(UserManager.locate == null ? null : UserManager.locate );
         editpart.setText(UserManager.part == null ? null : UserManager.part );
@@ -55,7 +59,7 @@ public class Editprofile extends AppCompatActivity {
                 datas.put("key", UserManager.key);
                 datas.put("email", editemail.getText().toString());
                 UserManager.email = editemail.getText().toString();
-                datas.put("adress", editlocate.getText().toString());
+                datas.put("address", editlocate.getText().toString());
                 UserManager.locate = editlocate.getText().toString();
                 datas.put("part", editpart.getText().toString());
                 UserManager.part = editpart.getText().toString();

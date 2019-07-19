@@ -22,6 +22,7 @@
         android:textSize="20sp"
         android:layout_gravity="center_horizontal"
         android:text="Name"
+        android:id="@+id/namelabel"
         android:textColor="#333333"
         android:fontFamily="@font/nanumgothicextrabold"
         android:layout_marginTop="17dp"/>

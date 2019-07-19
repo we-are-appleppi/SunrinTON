@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             intent = new Intent(MainActivity.this, Mycalendar.class);
             startActivity(intent);
-            finish();
         }
 
 

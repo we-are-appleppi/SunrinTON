@@ -10,6 +10,5 @@ public class LoginActiviy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
     }
 }

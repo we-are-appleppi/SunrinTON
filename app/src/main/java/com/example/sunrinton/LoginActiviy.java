@@ -24,7 +24,7 @@ public class LoginActiviy extends AppCompatActivity {
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent joinIntent = new Intent(LoginActiviy.this,register_1.class);
+                Intent joinIntent = new Intent(LoginActiviy.this,Register.class);
                 startActivity(joinIntent);
             }
         });

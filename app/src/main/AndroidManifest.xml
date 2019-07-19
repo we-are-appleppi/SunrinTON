@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ChattingActivity"></activity>
+        <activity android:name=".ChattingLobbyActivity" />
         <activity android:name=".Profiles.Editprofile"></activity>
         <activity android:name=".Profiles.Othercalendar" />
         <activity android:name=".Profiles.Addevent" />
         <activity android:name=".Profiles.Mycalendar" />
-        <activity android:name=".Chatting_lobby" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />

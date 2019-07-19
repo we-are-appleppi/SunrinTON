@@ -1,9 +1,12 @@
 package com.example.sunrinton;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,8 +16,11 @@ public class LoginActiviy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button joinButton = (Button)findViewById(R.id.joinButton);
-        Button loginButton = findViewById(R.id.loginButton);
+        TextView joinButton = findViewById(R.id.joinButton);
+        TextView loginButton = findViewById(R.id.loginButton);
+
+        joinButton.setPaintFlags(joinButton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

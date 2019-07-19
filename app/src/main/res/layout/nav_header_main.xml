@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:fontFamily="@font/NanumGothicExtraBold"
+        android:fontFamily="@font/nanumGothicExtraBold"
         android:textSize="14dp"
         android:textColor="#ffffff"
         android:text="@string/app_name"
@@ -33,7 +33,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/NanumGothicBold"
+        android:fontFamily="@font/nanumGothicBold"
         android:textColor="#ffffff"
         android:text="@string/app_description" />
 

@@ -45,7 +45,7 @@
         android:layout_gravity="center"
         android:background="@drawable/rectangle_2_copy"
         android:hint="내용을 입력하세요"
-        android:fontFamily="@font/NanumGothicBold"
+        android:fontFamily="@font/nanumGothicBold"
         android:textSize="9dp"
         android:padding="9dp"
         android:gravity="top"/>

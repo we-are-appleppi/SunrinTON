@@ -13,4 +13,5 @@ public class Othercalendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_othercalendar);
     }
+
 }

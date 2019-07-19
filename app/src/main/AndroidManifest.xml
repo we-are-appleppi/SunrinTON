@@ -11,12 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Chatting_lobby"></activity>
+        <activity android:name=".Profiles.Othercalendar"></activity>
+        <activity android:name=".Profiles.Addevent" />
+        <activity android:name=".addevent" />
+        <activity android:name=".Profiles.Mycalendar" />
+        <activity android:name=".Chatting_lobby" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Register"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Register"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActiviy"
             android:label="@string/app_name"

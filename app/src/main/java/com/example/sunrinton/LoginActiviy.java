@@ -109,6 +109,7 @@ public class LoginActiviy extends AppCompatActivity {
                                         UserManager.name = name;
                                         UserManager.key = jsonObject.getString("key");
                                         startActivity(loginIntent);
+                                        finish();
                                     }
                                     else{
                                         Toast.makeText(LoginActiviy.this, "잘못입력하셧습니다.", Toast.LENGTH_SHORT).show();

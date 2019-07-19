@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-
 public class Register extends AppCompatActivity {
 
     String str_email, str_name, str_passwd;
@@ -34,33 +33,40 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        et_email=findViewById(R.id.et_email);
-        et_name=findViewById(R.id.et_name);
-        et_passwd=findViewById(R.id.et_password);
-        start=findViewById(R.id.start);
+        setContentView(R.layout.activity_register);
 
-        str_email=et_email.getText().toString();
-        str_passwd=et_passwd.getText().toString();
-        str_name=et_name.getText().toString();
+        et_email = findViewById(R.id.et_email);
+        et_name = findViewById(R.id.et_name);
+        et_passwd = findViewById(R.id.et_password);
+        start = findViewById(R.id.start);
 
-
-        datas.put("name", str_name);
-        datas.put("password", str_passwd);
-        //datas.put("key", timestamp);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(str_email).matches()){
-                    Toast.makeText(Register.this, "잘못된 이메일형식 입니다", Toast.LENGTH_SHORT);
-                }
-                else{
+                str_email = et_email.getText().toString();
+                str_passwd = et_passwd.getText().toString();
+                str_name = et_name.getText().toString();
+
+
+                datas.put("name", str_name);
+                datas.put("password", str_passwd);
+                //datas.put("key", timestamp);
+
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(str_email).matches()) {
+                    Toast.makeText(Register.this, "잘못된 이메일형식 입니다", Toast.LENGTH_SHORT).show();
+                } else {
                     db.collection("accounts").document(str_email)
                             .set(datas)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-
+                                    Intent intent = new Intent();
+                                    intent.putExtra("email", str_email);
+                                    intent.putExtra("password", str_passwd);
+                                    intent.putExtra("name", str_name);
+                                    setResult(RESULT_OK, intent);
+                                    finish();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
@@ -70,16 +76,9 @@ public class Register extends AppCompatActivity {
                                 }
                             });
                 }
-                Intent intent = new Intent();
-                intent.putExtra("email", str_email);
-                intent.putExtra("password", str_passwd);
-                intent.putExtra("name", str_name);
-                setResult(RESULT_OK, intent);
-                finish();
             }
         });
 
-
-
     }
+
 }

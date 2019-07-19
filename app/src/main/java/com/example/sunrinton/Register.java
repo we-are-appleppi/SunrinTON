@@ -20,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 
 public class Register extends AppCompatActivity {
@@ -50,9 +51,18 @@ public class Register extends AppCompatActivity {
                 str_passwd = et_passwd.getText().toString();
                 str_name = et_name.getText().toString();
 
+                Random random = new Random();
+                int key = 0;
+
+                for(;;) {
+                    key = random.nextInt(10000);
+                    if(key > 1000)
+                        break;
+                }
+
                 datas.put("name", str_name);
                 datas.put("password", str_passwd);
-                //datas.put("key", timestamp);
+                datas.put("key", Integer.toString(key));
 
 
 

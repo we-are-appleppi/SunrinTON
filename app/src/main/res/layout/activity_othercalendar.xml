@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profiles.Othercalendar">
+    tools:context=".Profiles.Othercalendar"
+    android:orientation="vertical"
+    android:background="@drawable/group_2_copy">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:src="@drawable/ic_account_circle_gray_24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="155dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:text="Name"
+        android:textColor="#333333"
+        android:fontFamily="@font/nanumgothicextrabold"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:drawableLeft="@drawable/drawable_shape_home"
+        android:drawablePadding="4dp"
+        android:text="주소"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textSize="15dp"
+        android:layout_marginTop="38dp"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:drawableLeft="@drawable/drawalbe_shape_2"
+        android:drawablePadding="4dp"
+        android:text="이메일"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/belong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:drawableLeft="@drawable/drawable_shape_1"
+        android:drawablePadding="4dp"
+        android:text="소속"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:drawableLeft="@drawable/drawable_shape_1"
+        android:drawablePadding="4dp"
+        android:text="역할"
+        android:fontFamily="@font/nanumgothicbold"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"/>
+    
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:layout_width="196dp"
+        android:layout_height="196dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"/>
+
+</LinearLayout>

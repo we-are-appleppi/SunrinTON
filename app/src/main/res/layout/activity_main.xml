@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/group_1"
+    android:background="@drawable/group_6"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="68dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/hintfont"
             android:text="CONTACT"
@@ -29,10 +29,10 @@
             android:id="@+id/search"
             android:layout_width="287dp"
             android:layout_height="46dp"
-            android:layout_marginTop="107dp"
-            android:background="@drawable/layer_2_copy_8"
+            android:layout_marginTop="77dp"
+            android:background="@drawable/rounded_rectangle_4_copy"
             android:drawableRight="@drawable/drawable_shape_4"
-            android:fontFamily="@font/hintfont"
+            android:fontFamily="@font/nanumgothicbold"
             android:gravity="center"
             android:hint="거래처의 E-MAIL을 입력하세요"
             android:paddingLeft="30dp"
@@ -43,15 +43,20 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/search_button"
-            android:layout_width="70dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="11dp"
-            android:background="@drawable/group2"
+            android:layout_width="53dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_rectangle_4"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search" />
+            app:layout_constraintTop_toBottomOf="@+id/search"
+            android:text="검색"
+            android:gravity="center"
+            android:textSize="9sp"
+            android:textColor="#333333"
+            android:fontFamily="@font/nanumgothicbold"/>
 
 
         <include
@@ -60,8 +65,87 @@
             android:layout_height="match_parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="222dp"
+            android:src="@drawable/ic_account_circle_gray_24dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myName"
+            android:text="My Name"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:fontFamily="@font/nanumgothicextrabold"
+            android:layout_marginTop="17dp"/>
+        
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/drawable_shape_home"
+            android:drawablePadding="4dp"
+            android:text="주소"
+            android:fontFamily="@font/nanumgothicbold"
+            android:textSize="15dp"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/drawalbe_shape_2"
+            android:drawablePadding="4dp"
+            android:text="이메일"
+            android:fontFamily="@font/nanumgothicbold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/belong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/drawable_shape_1"
+            android:drawablePadding="4dp"
+            android:text="소속"
+            android:fontFamily="@font/nanumgothicbold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/drawable_shape_1"
+            android:drawablePadding="4dp"
+            android:text="역할"
+            android:fontFamily="@font/nanumgothicbold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"/>
+        
+        <ImageButton
+            android:layout_width="105dp"
+            android:layout_height="24dp"
+            android:id="@+id/modified"
+            android:background="@drawable/group_7"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="52dp"/>
+
+    </LinearLayout>
 
 
     <com.google.android.material.navigation.NavigationView

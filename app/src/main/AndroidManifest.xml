@@ -13,7 +13,7 @@
         <activity android:name=".ChattingActivity"></activity>
         <activity android:name=".ChattingLobbyActivity" />
         <activity android:name=".Profiles.Editprofile"></activity>
-        <activity android:name=".Profiles.Othercalendar"/>
+        <activity android:name=".Profiles.Othercalendar" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Profiles.Addevent" />
         <activity android:name=".Profiles.Mycalendar" />
         <activity

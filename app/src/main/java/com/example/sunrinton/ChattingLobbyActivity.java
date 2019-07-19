@@ -48,7 +48,7 @@ public class ChattingLobbyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatting__lobby);
+        setContentView(R.layout.activity_chatting_lobby);
         rcv = findViewById(R.id.chattingLobby_rcv);
         LL = findViewById(R.id.chatting_lobby_tab);
 

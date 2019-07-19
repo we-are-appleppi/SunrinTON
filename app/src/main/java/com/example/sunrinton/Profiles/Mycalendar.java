@@ -28,17 +28,15 @@ public class Mycalendar extends AppCompatActivity implements OnDateSelectedListe
         setContentView(R.layout.activity_mycalendar);
         calendarView=findViewById(R.id.my_calendar);
         calendarView.setOnDateChangedListener(this);
-
-
     }
 
 
     @Override
     public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-        day=date.getDay()+"";
-        String email=spref.getString("email", "");
-        db.collection("accounts").document(email)
-                .update("selectedDay", day);
+//        day=date.getDay()+"";
+////        String email=spref.getString("email", "");
+//        db.collection("accounts").document(email)
+//                .update("selectedDay", day);
 
     }
 }

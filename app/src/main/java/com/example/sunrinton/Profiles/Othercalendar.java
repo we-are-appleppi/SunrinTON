@@ -7,9 +7,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sunrinton.ChattingLobbyActivity;
 import com.example.sunrinton.LoginActiviy;
 import com.example.sunrinton.MainActivity;
 import com.example.sunrinton.R;
@@ -34,6 +37,8 @@ public class Othercalendar extends AppCompatActivity {
     public String part;
     public String division;
 
+
+    Button gotochat;
     TextView tvname, tvemail, tvlocate, tvpart, tvdivision;
 
     @Override

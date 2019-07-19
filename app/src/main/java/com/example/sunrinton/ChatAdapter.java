@@ -64,10 +64,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             if (chat.getSender().equals(items.get(i - 1).getSender())) {//같은사람이면
                 vh.view_onimg.setVisibility(View.GONE);
                 vh.pro_img.setVisibility(View.INVISIBLE);
-                if (items.get(i).getDate().equals(items.get(i-1).getDate()) && items.get(i).getTimestamp().substring(0, chat.getTimestamp().length() - 2).equals(items.get(i-1).getTimestamp().substring(0, chat.getTimestamp().length() - 2)))
-                    items.get(i - 1).setPrev(true);
-                else
-                    items.get(i - 1).setPrev(false);
             } else {//다른사람이면
                 vh.view_onimg.setVisibility(View.VISIBLE);
                 items.get(i - 1).setPrev(false);
@@ -84,14 +80,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             vh.pro_img.setVisibility(View.GONE);
             vh.view_onimg.setVisibility(View.GONE);
             vh.LL.setGravity(Gravity.RIGHT);//오른쪽에 붙임
-            vh.timeleft.setVisibility(View.VISIBLE);
-            vh.timeright.setVisibility(View.GONE);
-            vh.timeleft.setText(chat.getTimestamp().substring(0, chat.getTimestamp().length() - 2));
         } else {
             vh.LL.setGravity(Gravity.LEFT);//왼쪽에 붙임
-            vh.timeleft.setVisibility(View.GONE);
-            vh.timeright.setVisibility(View.VISIBLE);
-            vh.timeright.setText(chat.getTimestamp().substring(0, chat.getTimestamp().length() - 2));
         }
 //        if (items.size() > 1) {
 //            if (items.get(items.size() - 1).getDate().equals(items.get(items.size() - 2).getDate())
@@ -99,10 +89,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 //                    && items.get(items.size() - 1).getSender().equals(items.get(items.size() - 2).getSender())) {//같은사람, 같은 시간, 같은 날짜
 //            }
 //        }
-        if (items.get(i).isPrev()) {
-            vh.timeleft.setVisibility(View.GONE);
-            vh.timeright.setVisibility(View.GONE);
-        }
+
 
         vh.message.setText(chat.getMessage());
 

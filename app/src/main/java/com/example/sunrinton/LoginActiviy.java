@@ -69,8 +69,7 @@ public class LoginActiviy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Login(idtext.getText().toString(), passwordtext.getText().toString(), "");
-                Intent loginIntent = new Intent(LoginActiviy.this,MainActivity.class);
-                startActivity(loginIntent);
+
             }
         });
 
@@ -94,13 +93,15 @@ public class LoginActiviy extends AppCompatActivity {
                                 String datas = String.valueOf(document.getData());
                                 try {
                                     JSONObject jsonObject = new JSONObject(datas);
-                                    if(jsonObject.getString("password") == password){
+                                    if(jsonObject.getString("password").equals(password)){
                                         if (name.equals("")){
                                             SaveProfileDatas(idtext.getText().toString(), passwordtext.getText().toString(),name);
                                         }
                                         else{
                                             SaveProfileDatas(email, password, name);
                                         }
+                                        Intent loginIntent = new Intent(LoginActiviy.this,MainActivity.class);
+                                        startActivity(loginIntent);
                                     }
                                     else{
                                         Toast.makeText(LoginActiviy.this, "잘못입력하셧습니다.", Toast.LENGTH_SHORT).show();

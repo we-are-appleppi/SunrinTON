@@ -6,5 +6,10 @@ public class UserManager {
     public static String key;
     public static String email;
 
+    public static void UnSign() {
+        name = null;
+        key = null;
+        email = null;
+    }
 
 }
